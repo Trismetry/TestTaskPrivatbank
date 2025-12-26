@@ -1,0 +1,28 @@
+# Makefile for PostgreSQL Partitioned Table Project Test Task Illya Tihonyuk
+
+# Start containers
+up:
+    docker-compose up -d
+
+# Stop containers
+down:
+    docker-compose down
+
+# Restart containers
+restart: down up
+
+# Show logs for both containers
+logs:
+    docker-compose logs -f
+
+# Connect to primary database
+psql-primary:
+    docker exec -it postgres-primary psql -U postgres -d mydb
+
+# Connect to replica database
+psql-replica:
+    docker exec -it postgres-replica psql -U postgres -d mydb
+
+# Remove all data volumes (CAUTION: wipes DB data)
+clean:
+    docker-compose down -v

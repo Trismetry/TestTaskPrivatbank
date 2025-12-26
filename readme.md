@@ -43,7 +43,7 @@ Task Coverage:
 - **docker-compose.yaml** — defines primary and replica containers  
 - **init-primary.sql** — initialization script for primary (extensions, publication, replication role)  
 - **init-replica.sql** — initialization script for replica (extensions, subscription)  
-- **project.sql** — schema, functions, cron jobs, materialized view, triggers  - all tasks are here
+- **project.sql** — schema, functions, cron jobs, materialized view, triggers  -
 - **data/** — local directories mounted for persistent storage  
 
 ## 2. Requirements

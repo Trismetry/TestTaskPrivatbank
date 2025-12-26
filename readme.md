@@ -1,12 +1,15 @@
 ﻿# PostgreSQL Partitioned Table Project Test Task Illya Tihonyuk
 Primary DB (postgres-primary)
-   ├── Partitioned table T1
-   ├── pg_cron jobs (insert + update)
-   ├── Materialized view mv_sum
-   └── Publication pub_T1
+
+   ├── Partitioned table T1   
+   ├── pg_cron jobs (insert + update)   
+   ├── Materialized view mv_sum   
+   └── Publication pub_T1   
         ↓
 Replica DB (postgres-replica)
+
    └── Subscription sub_T1 (receives changes)
+   
 
 ---
 
@@ -42,11 +45,13 @@ This project includes a `Makefile` to simplify common tasks.
 1. Start containers:
    ```bash
    make up
-
+   
 2.Connect to primary:
+
 make psql-primary
 
 3.Load schema and logic:
+
 \i project.sql
 
 

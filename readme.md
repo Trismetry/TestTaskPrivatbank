@@ -17,6 +17,20 @@ This project is a test task that demonstrates how to build a partitioned table i
 populate it with large amounts of data, schedule recurring jobs with `pg_cron`,
 maintain a materialized view, and configure logical replication between two instances.
 
+---------------Task Coverage-------------------------------
+1.Partitioned table T1 — defined in project.sql.
+
+2.Data generation function (≥100k rows) — implemented in project.sql.
+
+3.Uniqueness on operation_guid — enforced via PK/unique constraint in project.sql.
+
+4.Scheduled job: insert every 5s — handled with pg_cron in project.sql.
+
+5.Scheduled job: update every 3s (even/odd IDs) — handled with pg_cron in project.sql.
+
+6.Materialized view with refresh trigger — defined in project.sql.
+
+7.Replication to another instance — configured via init-primary.sql + init-replica.sql and orchestrated in docker-compose.yaml.
 
 ---
 

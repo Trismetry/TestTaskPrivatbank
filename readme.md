@@ -18,6 +18,7 @@ populate it with large amounts of data, schedule recurring jobs with `pg_cron`,
 maintain a materialized view, and configure logical replication between two instances.
 
 ---------------Task Coverage-------------------------------
+
 1.Partitioned table T1 — defined in project.sql.
 
 2.Data generation function (≥100k rows) — implemented in project.sql.

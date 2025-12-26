@@ -17,7 +17,7 @@ This project is a test task that demonstrates how to build a partitioned table i
 populate it with large amounts of data, schedule recurring jobs with `pg_cron`,
 maintain a materialized view, and configure logical replication between two instances.
 
----------------Task Coverage-------------------------------
+Task Coverage:
 
 1.Partitioned table T1 — defined in project.sql.
 
